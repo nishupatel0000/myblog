@@ -9,8 +9,10 @@ require_once("includes/navbar.php");
             <div class="col-md-12">
                 <h3>Category</h3>
                 <div class="underline">
+
                     
                 </div>
+                
             </div>
         </div>
     </div>
