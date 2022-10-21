@@ -74,7 +74,7 @@ require_once("includes/header.php");
                 <div class="row">
                     <div class="col md-6 mb-3">
                         <label for="">Description</label>
-                        <textarea name="description" cols="30" rows="10" class="form-control"></textarea>
+                        <textarea name="description" id="summer" cols="30" rows="10" class="form-control"></textarea>
 
                     </div>
                 </div>

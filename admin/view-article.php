@@ -19,22 +19,22 @@ require_once("includes/config.php");
             </h4>
         </div>
         <div class="card-body">
-        <?php
-    if (isset($_SESSION["status"])) {
+            <?php
+            if (isset($_SESSION["status"])) {
 
 
-    ?>
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> <?php echo  $_SESSION["status"]; ?>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    <?php
-    }
-    unset($_SESSION["status"]);
-    session_destroy();
-    ?>
+            ?>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Holy guacamole!</strong> <?php echo  $_SESSION["status"]; ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php
+            }
+            unset($_SESSION["status"]);
+            session_destroy();
+            ?>
             <div class="table-responsive">
                 <table class="table table-bordered table-striped">
                     <thead>
@@ -90,5 +90,5 @@ require_once("includes/config.php");
 </div>
 <?php
 require_once("includes/footer.php");
-  require_once("includes/script.php");
+require_once("includes/script.php");
 ?>
