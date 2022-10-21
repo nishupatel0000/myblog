@@ -11,10 +11,10 @@ $tmp=$_FILES['photo']['tmp_name'];
 $old_image=$_POST['old_image'];
 $updateimage="";
 if($photo!=null){
-$filename=move_uploaded_file($tmp,'uploads/'.$photo);
-echo $filename;
-die();
-    $updateimage=$filename;
+      move_uploaded_file($tmp,'uploads/'.$photo);
+      unlink('uploads/'.$old_image);         
+    $updateimage=$_FILES['photo']['name'];
+
 }
 else{
     $updateimage=$old_image;
@@ -31,6 +31,7 @@ $status=isset($_POST['status'])==true?'1':'0';
 $update="update article set category_id='$category_id',article_name='$articlename',description='$description',photo='$updateimage',status='$status' where article_id='$id'";
 $query=mysqli_query($con,$update);
 if($query){
+    $_SESSION["status"]=" Article Updated Sucesfully";
     header('location:view-article.php');  
 }
 

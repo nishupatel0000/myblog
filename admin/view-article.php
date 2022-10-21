@@ -19,6 +19,22 @@ require_once("includes/config.php");
             </h4>
         </div>
         <div class="card-body">
+        <?php
+    if (isset($_SESSION["status"])) {
+
+
+    ?>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> <?php echo  $_SESSION["status"]; ?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <?php
+    }
+    unset($_SESSION["status"]);
+    session_destroy();
+    ?>
             <div class="table-responsive">
                 <table class="table table-bordered table-striped">
                     <thead>
@@ -51,7 +67,7 @@ require_once("includes/config.php");
                                     <td width="100px"><?php echo $row['status'] == '1' ? 'visible' : 'hidden'; ?></td>
                                     <td width=""><?php echo $row['date']; ?></td>
                                     <td><a href="edit-article.php?id=<?php echo $row['article_id']; ?>"><button class="btn btn-success">Edit</button></a>
-                                        <a href="deletee.php?id=<?php echo $row['article_id']; ?>"><button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</button></a>
+                                        <a href="article-delete.php?id=<?php echo $row['article_id']; ?>"><button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</button></a>
                                     </td>
 
                                 </tr>
