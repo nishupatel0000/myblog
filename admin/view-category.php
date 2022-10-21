@@ -38,6 +38,7 @@ require_once("includes/config.php");
         <thead>
           <tr>
             <th scope="col">categoryname</th>
+            <th scope="col">slug</th>
             <th scope="col">Action</th>
 
 
@@ -55,6 +56,7 @@ require_once("includes/config.php");
 
 
                 <td><?php echo $row['category_name']; ?></td>
+                <td><?php echo $row['slug']; ?></td>
                 <td><a href="edit.php?id=<?php echo $row['category_id']; ?>"><button class="btn btn-success">Edit</button></a>
                   <a href="delete.php?id=<?php echo $row['category_id']; ?>"><button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</button></a>
                 </td>

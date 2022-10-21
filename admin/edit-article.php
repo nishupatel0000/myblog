@@ -82,7 +82,7 @@ require_once("includes/header.php");
                         <div class="row">
                             <div class="col md-6 mb-3">
                                 <label for="">Description</label>
-                                <textarea name="description" cols="30" rows="10" id="summer" class="form-control"><?php echo $post['description'];?></textarea>
+                                <textarea name="description" cols="30" rows="10" id="summer" class="form-control"><?php echo htmlentities($post['description']);?></textarea>
 
                             </div>
                         </div>

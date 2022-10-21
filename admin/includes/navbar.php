@@ -55,7 +55,7 @@ require_once("includes/config.php");
           foreach ($result as $row) {
         ?>
             <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href=""><?php echo $row['category_name'];?></a>
+              <a class="nav-link active text-white" aria-current="page" href="viewdata.php?title=<?php echo $row['slug'];?>"><?php echo $row['category_name'];?></a>
             </li>
 
         <?php
