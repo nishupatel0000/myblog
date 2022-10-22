@@ -64,7 +64,14 @@ require_once("includes/config.php");
                                     <td width="10px"><?php echo $row['category_name']; ?></td>
                                     <td width="800px"><?php echo $row['description']; ?></td>
                                     <td width="100px"><img src="uploads/<?php echo $row['photo']; ?>" width="150px" height="80px" alt=""></td>
-                                    <td width="100px"><?php echo $row['status'] == '1' ? 'visible' : 'hidden'; ?></td>
+                                    <td width="100px"><?php if ($row['status'] == '1') {
+                                        echo '<p><a href="status.php?id='.$row['article_id'].'&status=1">visible</a></p>';
+                                        }
+                                        else{
+                                            echo '<p><a href="status.php?id='.$row['article_id'].'&status=1">disable</a></p>';
+
+                                        }
+                                        ?></td>
                                     <td width=""><?php echo $row['date']; ?></td>
                                     <td><a href="edit-article.php?id=<?php echo $row['article_id']; ?>"><button class="btn btn-success">Edit</button></a>
                                         <a href="article-delete.php?id=<?php echo $row['article_id']; ?>"><button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</button></a>

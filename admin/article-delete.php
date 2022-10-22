@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once("includes/config.php");
 $id=$_GET['id'];
 $image="select * from article where article_id='$id'";
@@ -10,6 +11,7 @@ if($result){
     if(file_exists('uploads/'.$row['photo'])){
         unlink('uploads/'.$row['photo']);
     }
+    $_SESSION["status"]="Article Deleted Sucesfully";
     header('location:view-article.php');
 }
 
