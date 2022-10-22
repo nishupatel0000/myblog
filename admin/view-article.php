@@ -68,7 +68,7 @@ require_once("includes/config.php");
                                         echo '<p><a href="status.php?id='.$row['article_id'].'&status=1">visible</a></p>';
                                         }
                                         else{
-                                            echo '<p><a href="status.php?id='.$row['article_id'].'&status=1">disable</a></p>';
+                                            echo '<p><a href="status.php?id='.$row['article_id'].'&status=0">disable</a></p>';
 
                                         }
                                         ?></td>
