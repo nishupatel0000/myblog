@@ -65,10 +65,10 @@ require_once("includes/config.php");
                                     <td width="800px"><?php echo $row['description']; ?></td>
                                     <td width="100px"><img src="uploads/<?php echo $row['photo']; ?>" width="150px" height="80px" alt=""></td>
                                     <td width="100px"><?php if ($row['status'] == '1') {
-                                        echo '<p><a href="status.php?id='.$row['article_id'].'&status=1">visible</a></p>';
+                                        echo '<p><a href="status.php?id='.$row['article_id'].'&status=0" class="btn btn-success">visible</a></p>';
                                         }
                                         else{
-                                            echo '<p><a href="status.php?id='.$row['article_id'].'&status=0">disable</a></p>';
+                                            echo '<p><a href="status.php?id='.$row['article_id'].'&status=1" class="btn btn-danger">disable</a></p>';
 
                                         }
                                         ?></td>

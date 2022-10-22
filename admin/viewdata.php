@@ -17,39 +17,41 @@ require_once("includes/navbar.php");
                     $myresult = mysqli_query($con, $slug);
                     if (mysqli_num_rows($myresult) > 0) {
                         while ($row = mysqli_fetch_assoc($myresult)) {
-                            $id=$row['category_id'];
-                            $mypost="select category_id,article_id,article_name,description,date from article where category_id='$id' AND status='1'";
-                            $query=mysqli_query($con,$mypost);
-                            if(mysqli_num_rows($query)>0){
-                                foreach($query as $record){
-                                ?>
-                                <a href="post.php?title=<?php echo $record['article_name']?>" class="text-decoration-none">
-                                <div class="card card-body shadow-sm mb-4">
-                                    <h5><?php echo $record['article_name'] ?></h5>
-                                    <div>
-                                        <label for="" class="text-dark me-2">Posted on: <?php  echo date('d-M-Y',strtotime($record['date'])) ?></label>
-                                    </div>
-                                </div>
-                                
-                            </a>
-                            <?php
-                                }
-                            }
-                            else{
+                            $id = $row['category_id'];
+                            $mypost = "select category_id,article_id,article_name,description,date from article where category_id='$id' AND status='1'";
+                            $query = mysqli_query($con, $mypost);
+                            if (mysqli_num_rows($query) > 0) {
+                                foreach ($query as $record) {
+                ?>
+                                    <a href="post.php?title=<?php echo $record['article_name'] ?>" class="text-decoration-none">
+                                        <div class="card card-body shadow-sm mb-4">
+                                            <h5><?php echo $record['article_name'] ?></h5>
+                                            <div>
+                                                <label for="" class="text-dark me-2">Posted on: <?php echo date('d-M-Y', strtotime($record['date'])) ?></label>
+                                            </div>
+                                        </div>
 
-                                echo "not found";
+                                    </a>
+                <?php
+                                }
+                            } else {
+                                echo  '<div class="card card-body shadow-sm mb-4">
+                               <h2> post not found </h2>    
+                               </div>';
                             }
                         }
                     } else {
-                        echo "error";
+                        echo  '<div class="card card-body shadow-sm mb-4">
+                               <h2> post not found </h2>    
+                               </div>';
                     }
                 } else {
-                    echo "not found";
+                    echo '<h2> post not found </h2>';
                 }
 
 
                 ?>
-         
+
             </div>
             <div class="col-md-3">
                 <div class="card">
