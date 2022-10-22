@@ -4,7 +4,6 @@ require_once("includes/navbar.php");
 
 ?>
 <style>
-<<<<<<< HEAD
     .underline {
         height: 4px;
         width: 50px;
@@ -24,24 +23,10 @@ require_once("includes/navbar.php");
             </div>
             <?php
             $select = "select * from category";
-=======
- 
-</style>
-<div class="py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3>Category</h3>
-                <div class="underline"></div>
-            </div>
-            <?php
-            $select = "select * from category ";
->>>>>>> 90b5d34cd5c58d558fa8bf474cfe796de1bcd749
             $result = mysqli_query($con, $select);
             if (mysqli_num_rows($result) > 0) {
                 foreach ($result as $row) {
             ?>
-<<<<<<< HEAD
 
                     <div class="col-md-3 mb-4">
                         <a class="text-decoration-none" aria-current="page" href="viewdata.php?title=<?php echo $row['slug']; ?>">
@@ -49,15 +34,6 @@ require_once("includes/navbar.php");
                                 <?php echo $row['category_name']; ?>
                             </div>
                         </a>
-=======
-                    <div class="col-md-3 mb-4">
-                        <a class="text-decoration-none" href="viewdata.php?title=<?php echo $row['slug']; ?>">
-                            <div class="card card-body">
-                                <?php echo $row['catergory_name']; ?>
-                            </div>
-                        </a>
-
->>>>>>> 90b5d34cd5c58d558fa8bf474cfe796de1bcd749
                     </div>
 
             <?php
@@ -65,10 +41,6 @@ require_once("includes/navbar.php");
             }
 
             ?>
-<<<<<<< HEAD
-=======
-
->>>>>>> 90b5d34cd5c58d558fa8bf474cfe796de1bcd749
         </div>
     </div>
 </div>
