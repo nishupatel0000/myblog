@@ -18,7 +18,7 @@
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <style>
         .bg-primary{
-            height:50px;
+            height: 50px, !important;;
         }
        
     </style>
