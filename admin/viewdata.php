@@ -18,7 +18,7 @@ require_once("includes/navbar.php");
                     if (mysqli_num_rows($myresult) > 0) {
                         while ($row = mysqli_fetch_assoc($myresult)) {
                             $id=$row['category_id'];
-                            $mypost="select category_id,article_id,article_name,description,date from article where category_id='$id'";
+                            $mypost="select category_id,article_id,article_name,description,date from article where category_id='$id' AND status='1'";
                             $query=mysqli_query($con,$mypost);
                             if(mysqli_num_rows($query)>0){
                                 foreach($query as $record){

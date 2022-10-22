@@ -67,13 +67,13 @@ require_once("includes/navbar.php");
                 <div class="underline">
                 </div>
                 <?php
-            $latest_select = "select * from article where status='1' order by article_id DESC LIMIT 2";
+            $latest_select = "select * from article where status='1' order by article_id DESC LIMIT 12";
             $myresult = mysqli_query($con, $latest_select);
             if (mysqli_num_rows($myresult) > 0) {
                 foreach ($myresult as $record) {
             ?>
 
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-12 mb-4">
                         <a class="text-decoration-none" aria-current="page" href="post.php?title=<?php echo $record['article_name']; ?>">
                             <div class="card card-body">
                                 <?php echo $record['article_name']; ?>
