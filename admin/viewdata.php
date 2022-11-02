@@ -36,17 +36,17 @@ require_once("includes/navbar.php");
                                 }
                             } else {
                                 echo  '<div class="card card-body shadow-sm mb-4">
-                               <h2> post not found </h2>    
+                               <h2> No Post Available</h2>    
                                </div>';
                             }
                         }
                     } else {
                         echo  '<div class="card card-body shadow-sm mb-4">
-                               <h2> post not found </h2>    
+                               <h2> No Post </h2>    
                                </div>';
                     }
                 } else {
-                    echo '<h2> post not found </h2>';
+                    echo '<h2> No Post </h2>';
                 }
 
 
@@ -59,7 +59,7 @@ require_once("includes/navbar.php");
                         <h4>Advertise Area</h4>
                     </div>
                     <div class="card-body">
-                        your advertise
+
                     </div>
                 </div>
             </div>

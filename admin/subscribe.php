@@ -19,8 +19,8 @@ if (isset($_POST)) {
     // echo $image_name;
     $email = $_POST['email'];
     $to_email = $email;
-    $subject = "hello!.... joining the webdevlopment stages and create the intereacting websites";
-    $body = "php/laravel,javascript";
+    $subject = "Thanks So much for your support!....";
+    $body = "new blog update";
     $header = "From: nishant.s2soft@gmail.com";
     $from = $header;
 
