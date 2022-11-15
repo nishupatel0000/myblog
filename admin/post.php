@@ -26,15 +26,15 @@ require_once("includes/navbar.php");
                                 <div class="card-body">
                                     <label for="" class="text-dark me-2">Posted on: <?php echo date('d-M-Y', strtotime($row['date'])) ?></label>
                                 </div>
-                                <hr/>
-                                <img src="uploads/<?php echo $row['photo'];?>" width="350px" align="center" alt="">
+                                <hr />
+                                <img src="uploads/<?php echo $row['photo']; ?>" width="350px" align="center" alt="">
                                 <div>
                                     <?php echo $row['description'];
                                     ?>
                                 </div>
 
                             </div>
-                        <?php
+                <?php
                         }
                     } else {
                         echo "No such found";

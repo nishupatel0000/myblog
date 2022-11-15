@@ -67,7 +67,7 @@ require_once("includes/navbar.php");
                 <div class="underline">
                 </div>
                 <?php
-            $latest_select = "select * from article where status='1' order by article_id DESC LIMIT 5";
+            $latest_select = "select * from article where status='1' order by article_id DESC  2";
             $myresult = mysqli_query($con, $latest_select);
             if (mysqli_num_rows($myresult) > 0) {
                 foreach ($myresult as $record) {

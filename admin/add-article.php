@@ -92,8 +92,8 @@ require_once("includes/header.php");
                     </div>
                 </div>
 
-
-                <button type="submit" name="article" id="article" class="btn btn-success">Add </button>
+        
+                <button type="submit" name="article" id="article" class="btn btn-success mt-5">Add </button>
             </form>
 
 
